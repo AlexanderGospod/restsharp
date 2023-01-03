@@ -68,6 +68,7 @@ namespace RestSharpApi.helper
             UserDataForCreationUserModel newUser = new UserDataForCreationUserModel(name, job);
             IRestResponse response = SendPutRequest(name, job, endpoint, newUser);
             Assert.AreEqual(200, (int)response.StatusCode);
+            Reporter.LogToReport(Status.Pass, "200 response code is received");
             UpdateUserDTO content = agent.GetContent<UpdateUserDTO>((RestResponse)response);
             return content;
         }
@@ -96,6 +97,8 @@ namespace RestSharpApi.helper
             RestClient url = agent.SetUrl(endpoint);
             RestRequest request = agent.CreateDeleteRequest();
             IRestResponse response = agent.GetResponse(url, request);
+            Assert.AreEqual(204, (int)response.StatusCode);
+            Reporter.LogToReport(Status.Pass, "204 response code is received");
             return response;
         }
         public static void CheckThatTheColorsAreSortedByYears(ListOfColorsDTO response)
