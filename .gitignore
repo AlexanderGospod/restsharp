@@ -1,4 +1,7 @@
 /packages/
+/.vs/
 /TestResults/
 /APITests/bin/
 /RestSharpApi/bin/
+/APITests/obj/
+/RestSharpApi/obj/
