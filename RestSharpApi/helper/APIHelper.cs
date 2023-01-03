@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using NUnit.Framework;
 using RestSharp;
 using System.IO;
 using static RestSharpApi.endpoints.ApiEndPoints;

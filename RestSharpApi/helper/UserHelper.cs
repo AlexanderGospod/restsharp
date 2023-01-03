@@ -1,7 +1,7 @@
 ﻿using APITests.dto.request;
 using APITests.dto.response;
 using AventStack.ExtentReports;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
 using RestSharpApi.dto.response;
 using System;
